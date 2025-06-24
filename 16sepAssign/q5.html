@@ -1,0 +1,80 @@
+<h2>Sign Up</h2>
+
+<form onsubmit="return validateSignup()">
+  <input type="text" id="fname" placeholder="First Name" required /><br />
+  <input type="text" id="lname" placeholder="Last Name" required /><br />
+  <input type="email" id="email" placeholder="Email" required /><br />
+  <input type="password" id="password" placeholder="Password" required /><br />
+  <input type="password" id="confirmPassword" placeholder="Confirm Password" required /><br />
+  <input type="number" id="age" placeholder="Age" required /><br />
+  Gender:
+  <select id="gender" required>
+    <option value="">Select</option>
+    <option>Male</option>
+    <option>Female</option>
+  </select><br />
+  <input type="checkbox" id="terms" required /> I agree to terms<br />
+
+  <button type="submit">Sign Up</button>
+</form>
+
+<script>
+  function validateSignup() {
+    const fname = document.getElementById("fname").value.trim();
+    const lname = document.getElementById("lname").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const age = parseInt(document.getElementById("age").value);
+    const pass = document.getElementById("password").value;
+    const confirm = document.getElementById("confirmPassword").value;
+    const terms = document.getElementById("terms").checked;
+
+    if (fname.length < 3 || lname.length < 3 || email.length < 3) {
+      alert("First name, last name, and email must be at least 3 characters.");
+      return false;
+    }
+
+    if (age < 0 || age > 150) {
+      alert("Enter a valid age between 0 and 150.");
+      return false;
+    }
+
+    if (pass !== confirm) {
+      alert("Passwords do not match.");
+      return false;
+    }
+
+    if (!terms) {
+      alert("You must agree to terms.");
+      return false;
+    }
+
+    alert("Sign Up Successful!");
+    return true;
+  }
+</script>
+
+
+<!-- part B Sign-In Form with Validation -->
+
+<h2>Sign In</h2>
+
+<form onsubmit="return validateSignin()">
+  <input type="email" id="loginEmail" placeholder="Email" required /><br />
+  <input type="password" id="loginPassword" placeholder="Password" required /><br />
+  <button type="submit">Sign In</button>
+</form>
+
+<script>
+  function validateSignin() {
+    const email = document.getElementById("loginEmail").value.trim();
+    const pass = document.getElementById("loginPassword").value;
+
+    if (email.length < 3 || pass.length < 3) {
+      alert("Email and password must be at least 3 characters.");
+      return false;
+    }
+
+    alert("Sign In Successful!");
+    return true;
+  }
+</script>
