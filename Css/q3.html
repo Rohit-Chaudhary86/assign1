@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Styled Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    .form-container {
+      background-color: #fff;
+      padding: 20px;
+      width: 300px;
+      margin: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      background-color: #e3f2fd; /* Light blue (custom palette) */
+    }
+
+    .form-section--opacity {
+      background-color: #c8e6c9; /* Light green */
+      padding: 10px;
+      opacity: 0.6; /* Applied opacity */
+    }
+
+    button {
+      background-color: #1976d2; /* Dark blue */
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <form>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" />
+      </div>
+
+      <div class="form-group form-section--opacity">
+        <label for="password">Password:</label>
+        <input type="password" id="password" />
+      </div>
+
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender">
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+</body>
+</html>
