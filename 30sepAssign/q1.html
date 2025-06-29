@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Box Positioning</title>
+  <style>
+    .box {
+      width: 50px;
+      height: 50px;
+      background-color: lightblue;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      border: 2px solid black;
+    }
+
+    /* 🔹 Box A */
+    .a {
+      left: 200px;
+      top: 200px;
+      background-color: orange;
+    }
+
+    /* 🔸 Center of A = (200+25, 200+25) = (225, 225) */
+
+    /* 🔹 Top-Left (B) */
+    .b {
+      left: 225 - 30 - 25px; /* 225(center) -30 -half width */
+      top: 225 - 30 - 25px;
+    }
+
+    /* 🔹 Top-Right (C) */
+    .c {
+      left: 225 + 30 - 25px;
+      top: 225 - 30 - 25px;
+    }
+
+    /* 🔹 Bottom-Left (D) */
+    .d {
+      left: 225 - 30 - 25px;
+      top: 225 + 30 - 25px;
+    }
+
+    /* 🔹 Bottom-Right (E) */
+    .e {
+      left: 225 + 30 - 25px;
+      top: 225 + 30 - 25px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box a">A</div>
+  <div class="box b">B</div>
+  <div class="box c">C</div>
+  <div class="box d">D</div>
+  <div class="box e">E</div>
+</body>
+</html>

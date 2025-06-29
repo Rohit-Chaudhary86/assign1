@@ -1,0 +1,46 @@
+ Simple Explanation:
+A higher z-index value means the element will be on top of elements with a lower z-index.
+
+It only works on elements that have a position set (relative, absolute, fixed, or sticky).
+
+ Example to Understand z-index:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Z-Index Example</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      color: white;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .box1 {
+      background-color: red;
+      left: 50px;
+      top: 50px;
+      z-index: 1; /* Behind box2 */
+    }
+
+    .box2 {
+      background-color: blue;
+      left: 100px;
+      top: 100px;
+      z-index: 2; /* On top of box1 */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box box1">Box 1</div>
+  <div class="box box2">Box 2</div>
+
+</body>
+</html>
