@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | PW Skills</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .about-container {
+            position: relative;
+            width: 90%;
+            max-width: 1000px;
+            margin: 50px auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .about-container img {
+            width: 100%;
+            display: block;
+        }
+
+        .about-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px 30px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .about-text h1 {
+            margin-bottom: 15px;
+            font-size: 32px;
+        }
+
+        .about-text p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        @media(max-width: 600px) {
+            .about-text h1 {
+                font-size: 24px;
+            }
+            .about-text p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="about-container">
+        <img src="https://pwskills.com/images/aboutUs/aboutUs.png" alt="PW Skills About Us">
+        <div class="about-text">
+            <h1>About Us</h1>
+            <p>
+                PW Skills' mission is to permeate through every student/professional's outlook towards jobs 
+                and change their attitude and perspective from "How Can I Do It?" to "Of Course I Can Do It". 
+                We aim to do this by providing exceptional upskilling courses at affordable rates, while being 
+                tech-forward so anyone, anywhere can access and improve their ability to be successful in life.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
