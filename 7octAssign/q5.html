@@ -1,0 +1,14 @@
+Task 5: Difference between justify-items vs justify-self
+ Property	 Works On	 Description
+justify-items	Entire container (parent)	Aligns all grid items horizontally within their cells.
+justify-self	Individual grid item (child)	Aligns a single item horizontally within its cell.
+
+Code Example:
+
+<div style="display: grid; grid-template-columns: repeat(2, 100px); gap: 10px; justify-items: center; border: 2px solid;">
+  <div style="background: #4caf50; padding: 20px;">1</div>
+  <div style="background: #2196f3; padding: 20px; justify-self: end;">2</div>
+</div>
+ Box 1 is centered due to justify-items: center (applied to the container).
+
+ Box 2 is pushed to the right (end) due to justify-self: end (applied individually).
