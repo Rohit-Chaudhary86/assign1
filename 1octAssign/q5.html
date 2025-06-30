@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IRCTC Booking Clone</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      background-color: #f2f2f2;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header img {
+      width: 60px;
+    }
+    header h1 {
+      font-size: 24px;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+    nav ul li {
+      cursor: pointer;
+    }
+    nav ul li:hover {
+      text-decoration: underline;
+    }
+
+    .banner {
+      width: 100%;
+      height: 250px;
+      background-image: url('https://images.unsplash.com/photo-1509383273073-a7f2d4b76056?auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .booking-form {
+      background-color: white;
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .booking-form h2 {
+      margin-bottom: 20px;
+      color: #003366;
+    }
+
+    .form-group {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .form-group label {
+      width: 100%;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+    }
+
+    .form-group.full {
+      flex: 1 1 100%;
+    }
+
+    .form-group.half {
+      flex: 1 1 45%;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      .form-group.half {
+        flex: 1 1 100%;
+      }
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/IRCTC_Logo.svg" alt="IRCTC Logo">
+    <h1>IRCTC Ticket Booking</h1>
+  </div>
+  <nav>
+    <ul>
+      <li>Home</li>
+      <li>Trains</li>
+      <li>Bookings</li>
+      <li>Login</li>
+      <li>Contact</li>
+    </ul>
+  </nav>
+</header>
+
+<section class="banner">
+  Book Your Train Tickets Hassle-Free!
+</section>
+
+<section class="booking-form">
+  <h2>Book Your Ticket</h2>
+  <form>
+    <div class="form-group half">
+      <label>From</label>
+      <input type="text" placeholder="Enter Departure Station">
+    </div>
+    <div class="form-group half">
+      <label>To</label>
+      <input type="text" placeholder="Enter Destination Station">
+    </div>
+    <div class="form-group half">
+      <label>Journey Date</label>
+      <input type="date">
+    </div>
+    <div class="form-group half">
+      <label>Class</label>
+      <select>
+        <option>AC First Class</option>
+        <option>AC 2 Tier</option>
+        <option>AC 3 Tier</option>
+        <option>Sleeper</option>
+        <option>Second Sitting</option>
+      </select>
+    </div>
+    <div class="form-group half">
+      <label>Quota</label>
+      <select>
+        <option>General</option>
+        <option>Ladies</option>
+        <option>Tatkal</option>
+        <option>Senior Citizen</option>
+      </select>
+    </div>
+    <div class="form-group half">
+      <label>Passengers</label>
+      <input type="number" min="1" value="1">
+    </div>
+    <button type="submit">Search Trains</button>
+  </form>
+</section>
+
+<footer>
+  &copy; 2025 IRCTC Clone | Designed by Rohit
+</footer>
+
+</body>
+</html>
