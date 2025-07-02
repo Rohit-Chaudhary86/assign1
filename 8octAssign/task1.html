@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: gray;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+            min-height: 60vh;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* ✅ Media Query */
+        @media (max-width: 600px) {
+            header {
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Full Stack Web Development</h1>
+    </header>
+
+    <main>
+        <p>This is the main content section.</p>
+    </main>
+
+    <footer>
+        <p>© 2025 Rohit's Website</p>
+    </footer>
+
+</body>
+</html>
